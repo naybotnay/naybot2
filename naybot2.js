@@ -229,7 +229,7 @@ ${prefix}join ⇏ لدخول البوت الروم
 
 
 client.on('message', function(message) {
-	const myID = "308280511371935744";
+	const myID = "479781341236559883";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
