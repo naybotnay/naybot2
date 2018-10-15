@@ -191,7 +191,7 @@ function isYoutube(str) {
   if (message.content === `${prefix}`) {
     const embed = new Discord.RichEmbed()
      .setColor("RANDOM")
-.setFooter('Thank You For use this bot ! .')
+.setFooter('BlainAnzi | Pride.#0030 bot ! .')
       message.channel.send({embed});
      }
     });
