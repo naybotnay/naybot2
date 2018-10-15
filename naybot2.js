@@ -14,7 +14,7 @@ client.on('ready', () => {
   console.log('---------------')
 });
 
-const prefix = "m"
+const prefix = ".B"
 client.on('message', async msg => {
 	if (msg.author.bot) return undefined;
 	
@@ -65,7 +65,7 @@ client.on('message', async msg => {
 			        .setDescription(`**الرجآء من حضرتك إختيآر رقم المقطع** :
 ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 
-					.setFooter("-")
+                  .setFooter("BY: الـجنـرال#2666")
 					msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
 					
 					// eslint-disable-next-line max-depth
@@ -83,7 +83,7 @@ ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 					var video = await youtube.getVideoByID(videos[videoIndex - 1].id);
 				} catch (err) {
 					console.error(err);
-					return msg.channel.send(':X: لا يتوفر نتآئج بحث ');
+					return msg.channel.send(':x: لا يتوفر نتآئج بحث ');
 				}
 			}
 
@@ -207,7 +207,7 @@ function play(guild, song) {
 }
 
 const adminprefix = "$vip";
-const devs = ['274923685985386496'];
+const devs = ['488334414124810240'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
@@ -232,24 +232,31 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 
 });
 
-client.on("message", message => {
+	client.on("message", message => {
  if (message.content === `${prefix}help`) {
   const embed = new Discord.RichEmbed() 
-      .setColor("#000000")
+      .setColor("RANDOM")
       .setDescription(`
+${prefix}join ⇏ لدخول البوت الروم
 ${prefix}play ⇏ لتشغيل أغنية برآبط أو بأسم
 ${prefix}skip ⇏ لتجآوز الأغنية الحآلية
-${prefix}pause ⇏ إيقآف الأغنية مؤقتا
+${prefix}stop ⇏ لإخرآج البوت من الروم
 ${prefix}resume ⇏ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
 ${prefix}vol ⇏ لتغيير درجة الصوت 100 - 0
-${prefix}stop ⇏ لإخرآج البوت من الروم
 ${prefix}np ⇏ لمعرفة الأغنية المشغلة حآليا
+${prefix}pause ⇏ إيقآف الأغنية مؤقتا
 ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
  `)
-   message.channel.sendEmbed(embed)
+      .setFooter(message.author.tag, message.author.avatarURL)
+
+
+
+	  message.channel.sendEmbed(embed)
     
    }
    }); 
+
+	
 
 
 
@@ -257,55 +264,55 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
 
 
 client.on('message', function(message) {
-	const myID = "479781341236559883";
+	const myID = "448607625077194762";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+            if(!args) return message.reply('يجب كتابة الحالة التي تريدها');
         client.user.setUsername(args);
         message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
+           msg.delete(3000);
+          message.delete(3000);
         });
     } else if(message.content.startsWith(prefix + "stream")) {
 		        if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setGame(args , 'https://twitch.tv/6xlez1');
+            if(!args) return message.reply('يجب كتابة الحالة التي تريدها.');
+        client.user.setGame(args , 'https://www.twitch.tv/brokenklash');
         message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
+           msg.delete(3000);
+          message.delete(3000);
         });
-    } else if(message.content.startsWith(prefix + "play")) {
+    } else if(message.content.startsWith(prefix + "playing")) {
 				        if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+            if(!args) return message.reply('يجب كتابة الحالة التي تريدها');
         client.user.setGame(args);
         message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
+           msg.delete(3000);
+          message.delete(3000);
         });
     } else if(message.content.startsWith(prefix + "listen")) {
 				        if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+            if(!args) return message.reply('يجب كتابة الحالة التي تريدها.');
         client.user.setActivity(args, {type:'LISTENING'});
         message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
+           msg.delete(3000);
+          message.delete(3000);
         });
     } else if(message.content.startsWith(prefix + "watch")) {
 				        if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+            if(!args) return message.reply('يجب كتابة الحالة التي تريدها');
         client.user.setActivity(args, {type:'WATCHING'});
         message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
+           msg.delete(3000);
+          message.delete(3000);
         });
     } else if(message.content.startsWith(prefix + "setavatar")) {
 				        if(message.author.id !== myID) return;
         client.user.setAvatar(args);
         message.channel.send(':white_check_mark: Done!').then(msg => {
-                if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-           msg.delete(5000);
-          message.delete(5000);
+                if(!args) return message.reply('يجب كتابة الحالة التي تريدها');
+           msg.delete(3000);
+          message.delete(3000);
         });
     }
 });
@@ -314,8 +321,8 @@ client.on('message', function(message) {
 
 
 client.on('message', async message => {
-            if(!message.channel.guild) return;
-             if (message.content.startsWith("m")) {
+ if(message.author.id !== '448607625077194762') return;
+             if (message.content.startsWith("1")) {
 let args = message.content.split(' ').slice(1).join(' ');
             let sigMessage = await args;
             
@@ -339,6 +346,25 @@ let args = message.content.split(' ').slice(1).join(' ');
         
 }
 });
+
+
+
+  client.on('message', message => {
+  if (!message.guild) return;
+
+  if (message.content === '.Bjoin') {
+    if (message.member.voiceChannel) {
+      message.member.voiceChannel.join()
+        .then(connection => { 
+        })
+        .catch(console.log);
+    } else {
+      message.reply('يجب ان تكون في روم صوتي');
+    }
+  }
+});
+  
+
 
    
 client.login(process.env.BOT_TOKEN);
