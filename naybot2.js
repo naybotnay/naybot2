@@ -264,7 +264,7 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
 
 
 client.on('message', function(message) {
-	const myID = "448607625077194762";
+	const myID = "402245218788966410";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -321,7 +321,7 @@ client.on('message', function(message) {
 
 
 client.on('message', async message => {
- if(message.author.id !== '448607625077194762') return;
+ if(message.author.id !== '402245218788966410') return;
              if (message.content.startsWith("1")) {
 let args = message.content.split(' ').slice(1).join(' ');
             let sigMessage = await args;
