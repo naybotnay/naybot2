@@ -15,7 +15,12 @@ client.on('ready', function() {
       client.on('ready', () => {
       
       });
-
+/*
+////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\
+////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\
+////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\
+////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
 var servers = [];
 var queue = [];
 var guilds = [];
@@ -26,7 +31,12 @@ var voiceChannel = null;
 var skipReq = 0;
 var skippers = [];
 var now_playing = [];
-
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\V/////////////////////////
+\\\\\\\\\\\\\\\\\\\\\\\\V/////////////////////////
+\\\\\\\\\\\\\\\\\\\\\\\\V/////////////////////////
+\\\\\\\\\\\\\\\\\\\\\\\\V/////////////////////////
+*/
 client.on('ready', () => {});
 var download = function(uri, filename, callback) {
     request.head(uri, function(err, res, body) {
@@ -176,13 +186,10 @@ function add_to_queue(strID) {
     }
 }
 
-function search_video(query, callback) {
+function search_video(query, cb) {
     request("https://www.googleapis.com/youtube/v3/search?part=id&type=video&q=" + encodeURIComponent(query) + "&key=" + yt_api_key, function(error, response, body) {
         var json = JSON.parse(body);
-        if (!json.items[0]) callback("3_-a9nVZYjk");
-        else {
-            callback(jsonf.items[0].id.videoId);
-        }
+        cb(json.items[0].id.videoId);
     });
 }
 
@@ -194,7 +201,7 @@ function isYoutube(str) {
   if (message.content === `${prefix}`) {
     const embed = new Discord.RichEmbed()
      .setColor("RANDOM")
-.setFooter('BlainAnzi | Pride.#0030 bot ! .')
+.setFooter('Thank You For use this bot ! .')
       message.channel.send({embed});
      }
     });
